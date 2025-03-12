@@ -1,0 +1,3 @@
+
+
+update clickargo2.T_CORE_USR set USR_DT_PWD_LUPD = '2023-07-30 08:59:51' where USR_DT_PWD_LUPD = '2023-06-30 08:59:51';

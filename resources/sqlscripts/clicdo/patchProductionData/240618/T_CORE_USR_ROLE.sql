@@ -1,0 +1,107 @@
+-- T_CORE_USR_ROLE
+insert ignore into clickargo2.T_CORE_USR_ROLE(
+UROL_UID, 						-- 1
+UROL_APPSCODE, 					-- 2
+UROL_ROLEID, 					-- 3
+UROL_ADMIN_OPT, 				-- 4
+UROL_STATUS, 					-- 5
+UROL_DT_CREATE, 				-- 6
+UROL_UID_CREATE, 				-- 7
+UROL_DT_LUPD, 					-- 8
+UROL_UID_LUPD, 					-- 9
+UROL_TEMP_ROLE 					-- 10
+)
+SELECT 
+USR_UID, 						-- 1 UROL_UID
+'CKDO', 						-- 2 UROL_APPSCODE
+'FINANCE', 						-- 3 UROL_ROLEID
+'N', 							-- 4 UROL_ADMIN_OPT
+'A', 							-- 5 UROL_STATUS
+SYSDATE(), 						-- 6 UROL_DT_CREATE
+'SYS', 							-- 7 UROL_UID_CREATE
+SYSDATE(), 						-- 8 UROL_DT_LUPD
+'SYS', 							-- 9 UROL_UID_LUPD
+'N' 							-- 10 UROL_TEMP_ROLE
+FROM clickargo2.T_CORE_USR
+where USR_UID in ('CKU01413','CKU01414','CKU01415', 'CKU01416', 'CKU01417', 'CKU01418', 'CKU01419', 'CKU01420', 'CKU01421', 'CKU01422', 'CKU01423', 'CKU01424', 'CKU01425', 'CKU01426', 'CKU01427', 'CKU01428', 'CKU01429', 'CKU01430', 'CKU01431', 'CKU01432', 'CKU01433', 'CKU01434', 'CKU01435'); 	-- T_CORE_USR.USR_UID
+
+
+insert ignore into clickargo2.T_CORE_USR_ROLE(
+UROL_UID, 						-- 1
+UROL_APPSCODE, 					-- 2
+UROL_ROLEID, 					-- 3
+UROL_ADMIN_OPT, 				-- 4
+UROL_STATUS, 					-- 5
+UROL_DT_CREATE, 				-- 6
+UROL_UID_CREATE, 				-- 7
+UROL_DT_LUPD, 					-- 8
+UROL_UID_LUPD, 					-- 9
+UROL_TEMP_ROLE 					-- 10
+)
+SELECT 
+USR_UID, 						-- 1 UROL_UID
+'CKDO', 						-- 2 UROL_APPSCODE
+'OPERATIONS', 					-- 3 UROL_ROLEID
+'N', 							-- 4 UROL_ADMIN_OPT
+'A', 							-- 5 UROL_STATUS
+SYSDATE(), 						-- 6 UROL_DT_CREATE
+'SYS', 							-- 7 UROL_UID_CREATE
+SYSDATE(), 						-- 8 UROL_DT_LUPD
+'SYS', 							-- 9 UROL_UID_LUPD
+'N' 							-- 10 UROL_TEMP_ROLE
+FROM clickargo2.T_CORE_USR
+where USR_UID in ('CKU01413','CKU01414','CKU01415','CKU01436','CKU01437','CKU01436','CKU01439'); 	-- T_CORE_USR.USR_UID
+
+
+insert ignore into clickargo2.T_CORE_USR_ROLE(
+UROL_UID, 						-- 1
+UROL_APPSCODE, 					-- 2
+UROL_ROLEID, 					-- 3
+UROL_ADMIN_OPT, 				-- 4
+UROL_STATUS, 					-- 5
+UROL_DT_CREATE, 				-- 6
+UROL_UID_CREATE, 				-- 7
+UROL_DT_LUPD, 					-- 8
+UROL_UID_LUPD, 					-- 9
+UROL_TEMP_ROLE 					-- 10
+)
+SELECT 
+USR_UID, 						-- 1 UROL_UID
+'CKDO', 						-- 2 UROL_APPSCODE
+'OFFICER', 						-- 3 UROL_ROLEID
+'N', 							-- 4 UROL_ADMIN_OPT
+'A', 							-- 5 UROL_STATUS
+SYSDATE(), 						-- 6 UROL_DT_CREATE
+'SYS', 							-- 7 UROL_UID_CREATE
+SYSDATE(), 						-- 8 UROL_DT_LUPD
+'SYS', 							-- 9 UROL_UID_LUPD
+'N' 							-- 10 UROL_TEMP_ROLE
+FROM clickargo2.T_CORE_USR
+where USR_UID in ('CKU01402','CKU01403','CKU01405', 'CKU01406', 'CKU01407', 'CKU01408', 'CKU01409', 'CKU01410', 'CKU01411', 'CKU01412'); 	-- T_CORE_USR.USR_UID
+
+
+insert ignore into clickargo2.T_CORE_USR_ROLE(
+UROL_UID, 						-- 1
+UROL_APPSCODE, 					-- 2
+UROL_ROLEID, 					-- 3
+UROL_ADMIN_OPT, 				-- 4
+UROL_STATUS, 					-- 5
+UROL_DT_CREATE, 				-- 6
+UROL_UID_CREATE, 				-- 7
+UROL_DT_LUPD, 					-- 8
+UROL_UID_LUPD, 					-- 9
+UROL_TEMP_ROLE 					-- 10
+)
+SELECT 
+USR_UID, 						-- 1 UROL_UID
+'CKDO', 						-- 2 UROL_APPSCODE
+'OFFICER_FINANCE', 				-- 3 UROL_ROLEID
+'N', 							-- 4 UROL_ADMIN_OPT
+'A', 							-- 5 UROL_STATUS
+SYSDATE(), 						-- 6 UROL_DT_CREATE
+'SYS', 							-- 7 UROL_UID_CREATE
+SYSDATE(), 						-- 8 UROL_DT_LUPD
+'SYS', 							-- 9 UROL_UID_LUPD
+'N' 							-- 10 UROL_TEMP_ROLE
+FROM clickargo2.T_CORE_USR
+where USR_UID in ('CKU01402','CKU01403','CKU01404'); 	-- T_CORE_USR.USR_UID

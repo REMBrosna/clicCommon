@@ -1,0 +1,315 @@
+{
+    "coJob": {
+        "blNo": "BL Number",
+        "type": "Shipment Type",
+        "authParty": "Authorized Party",
+        "party": "Party",
+        "clicDoJobListTitle": "ClicDO Job List",
+        "activeJobsTitle": "Active Jobs",
+        "jobsHistoryTitle": "Jobs History",
+        "button": {
+            "newJob": "New Job",
+            "create": "Create",
+            "history": "History",
+            "active": "Active Jobs"
+        },
+        "icon": {
+            "showHistoryIcon": "Show Jobs History",
+            "showActiveIcon": "Show Active Jobs"
+        },
+        "msg": {
+            "cancelSuccess": "Cancelled Successfully",
+            "deleteSuccess": "Deleted Successfully",
+            "confirmation": "Are you sure you want to {{action}} {{id}}?",
+            "deleteConfirm": "Are you sure you want to {{action}} this document? "
+        },
+        "popup": {
+            "confirmation": "Confirmation",
+            "newJob": "New Job"
+        }
+    },
+    "ffJobClaim": {
+        "jobId": "Job ID",
+        "shipmentType": "Shipment Type",
+        "shippingLine": "Shipping Line",
+        "noOfBl": "No. of BL",
+        "docStatus": "Document Verify Status",
+        "btnAddNewClaimJob": "+ New Claim Job",
+        "showHistoryIcon": "History",
+        "showHistoryHeader": "Jobs History",
+        "showActiveIcon": "Active Jobs",
+        "showActiveHeader": "DO Claim Jobs",
+        "btnAddNewExtensionJob": "+ New Extension Job",
+        "showExtensionHeader": "DO Extension Jobs",
+        "action": {
+            "view": "View Job",
+            "edit": "Edit Job",
+            "delete": "Delete Job",
+            "query": "View Query"
+        }
+    },
+    "ffBlListing": {
+        "blListHeader": "Bill of Ladings",
+        "bcListTitle": "ClicDO Claim Jobs List",
+        "authoriserParty": "Authoriser Party"
+    },
+    "ffClaimDetails": {
+        "selectedBls": {
+            "blNo": "BL No.",
+            "type": "Shipment Type",
+            "shippingLine": "Shipping Line",
+            "authoriser": "Authoriser",
+            "blDtSubmitted": "BL Date Submitted",
+            "noOfContainers": "No. of Containers",
+            "doState": "DO Status"
+        }
+    },
+    "common": {
+        "shippingLine": "Shipping Line",
+        "jobId": "Job ID",
+        "dtSubmitted": "Date Submitted",
+        "status": "Status",
+        "action": "Action",
+        "id": "Id",
+        "name": "Name",
+        "desc": "Description",
+        "descOtherLang": "Description (Other Lang)",
+        "dateCreated": "Date Created",
+        "dateUpdated": "Date Updated",
+        "userId": "User Id",
+        "email": "Email",
+        "phone": "Phone",
+        "startDate": "Start Date",
+        "expiryDate": "Expiry Date",
+        "type": "Type",
+        "history": "History",
+        "active": "Active"
+    },
+    "query": {
+        "queryId": "Query ID",
+        "requestor": "Requestor",
+        "query": "Query",
+        "dtQuery": "Query Date",
+        "responder": "Responder",
+        "response": "Response",
+        "dtResponse": "Response Date",
+        "action": "Action"
+    },
+    "docVerification": {
+        "requireReturn": "Require Return",
+        "docType": "Document Type",
+        "refNo": "Reference No.",
+        "doNo": "DO No.",
+        "dtCreate": "Created At",
+        "status": "Document Status",
+        "payStatus": "Payment Status",
+        "action": "Action"
+    },
+    "attachments": {
+        "title": "Attachments",
+        "titleSub": "Job Documents",
+        "docFile": "Document File",
+        "nofilechosen": "No file chosen",
+        "validityDt": "Validity Date",
+        "docId": "Document ID",
+        "docType": "Document Type",
+        "docName": "Document Name",
+        "docNo": "Document No.",
+        "authoriser": "Authoriser",
+        "blNo": "BL No.",
+        "doNo": "DO No.",
+        "dtCreate": "Created At",
+        "dtValidity": "Validity Date",
+        "action": "Action"
+    },
+    "payments": {
+        "ffTableHdr": "Active Jobs for Payment",
+        "jobId": "Job ID",
+        "shipmentType": "Shipment Type",
+        "dtSubmit": "Submitted Date",
+        "noOfBls": "No. of BLs",
+        "amtIDR": "Amount (IDR)",
+        "amtUSD": "Amount (USD)",
+        "status": "Status",
+        "action": "Action",
+        "paymentConfirmMsg": "Are you sure you want to pay for {{param}}?",
+        "paymentConfirmTitle": "Confirm Make Payment",
+        "errorNoSelectMsg": "Please select at least one job for payment",
+        "errorNoSelectTitle": "No Job selected!",
+        "errorNoJobNoToSelected": "Please select a Trucking Operator and at least one job for payment",
+        "errorNoTransactionSelectTitle": "No Transaction selected!",
+        "errorDifferentJobStatusSelection": "Please select job with same job status!",
+        "errorThereIsNoOption": "There is no option for this job!",
+        "errorYourAccountIsSuspended": "Your account is suspended!",
+        "errorCompletedReq": "Delivery Order data is missing!"
+    },
+    "trucklist": {
+        "jobid": "Job ID",
+        "type": "Job Type",
+        "truckoperator": "Trucking Operator",
+        "coff": "CO/FF",
+        "dtdelivery": "Delivery Date",
+        "shipref": "Shipment Ref",
+        "cusref": "Customer Ref",
+        "pickup": "Pick-up",
+        "lastdrop": "Last Drop-off",
+        "dtCreate": "Date Created",
+        "dtLupd": "Date Updated",
+        "dtDueIn": "Job In Payment Due Date",
+        "dtDueOut": "Job Out Payment Due Date",
+        "status": "Status",
+        "action": "Action"
+    },
+    "billOfLading": {
+        "action": {
+            "downloadBl": "Download",
+            "viewBl": "Lihat Detail",
+            "reject": "Reject",
+            "withdraw": "Withdraw"
+        }
+    },
+    "truck": {
+        "type": "Type",
+        "platNo": "Plat Number",
+        "class": "Class",
+        "photo": "photo",
+        "dimention": "Dimention (LWH)",
+        "maxWeight": "Max Weight (Kg)",
+        "volume": "Volume (CBM)",
+        "maintenance": "Maintenance",
+        "size": "Size",
+        "Number": "Number"
+    },
+    "audits": {
+        "event": "Event",
+        "dateTime": "Date Time",
+        "remarks": "Remarks",
+        "userId": "User Id",
+        "userName": "User Name"
+    },
+    "driver": {
+        "lisenseNo": "Lisense No"
+    },
+    "rental": {
+        "to": "To",
+        "noTrucks": "No Trucks",
+        "truckType": "Truck Type",
+        "noOfTruck": "No. Of Trucks",
+        "rentalValue": "Rental Value",
+        "rentalRate": "Rental Rate"
+    },
+    "contract": {
+        "truckOperator": "Truck Operator",
+        "freightForwader": "Freight Forwader",
+        "cargoOwner": "Cargo Owner"
+    },
+    "verified": {
+        "jobId": "Job ID",
+        "jobType": "Job Type",
+        "invoiceFrom": "Invoice From",
+        "invoiceTo": "Invoice To",
+        "noOfTrips": "No Of Trips",
+        "changes": "Changes",
+        "reimbursement": "Reimbursement",
+        "billingDate": "Billing Date",
+        "invoiceAppDt": "Invoice Approved Date",
+        "status": "Status",
+        "verifiedDate": "Verified Date",
+        "verifiedBy": "Verified By",
+        "history": "History",
+        "active": "Active",
+        "title": "Verified Jobs",
+        "charges": "Charges",
+        "paymentDueDate": "Payment Due Date",
+        "approvedDate": "Approved Date",
+        "approvedBy": "Approved By"
+    },
+    "billVerification": {
+        "jobId": "Job ID",
+        "jobType": "Job Type",
+        "coFfName": "Cargo Owner",
+        "toName": "Trucking Operator",
+        "status": "Status",
+        "ackDate": "Date Acknowledged"
+    },
+    "orderDetails": {
+        "title": "Delivery Order Details",
+        "from": "From",
+        "to": "To",
+        "orderNum": "Order Number",
+        "do": "DO",
+        "signedDo": "Signed DO"
+    },
+    "finance": {
+        "invTitle": "Verified Invoices",
+        "jobPaymentTitle": "Active Payment",
+        "historyApprovedJobInvoice": "History Job",
+        "activeApprovedJobInvoice": "Active Job",
+        "verifiedJobsTitle": "Verified Job Invoices",
+        "approvedJobsTitle": "Approved Job Invoices",
+        "invId": "Invoice ID",
+        "invFrom": "Invoice From",
+        "noOfJobs": "No of Jobs",
+        "noOfTrips": "No of Trips",
+        "charges": "Charges",
+        "reimbursement": "Reimbursement",
+        "billingDate": "Billing Date",
+        "verifiedDate": "Verified Date",
+        "verifiedBy": "Verified By",
+        "paymentState": "Payment State",
+        "approvedDate": "Approved Date",
+        "approvedBy": "Approved By",
+        "dateCreated": "Date Created",
+        "dateUpdated": "Date Updated",
+        "status": "Status",
+        "confirmation": {
+            "title": "Confirmation",
+            "msg": "Are you sure you want to {{action}}?"
+        }
+    },
+    "creditLines": {
+        "txtType": "Txn Type",
+        "desc": "Description",
+        "onHold": "On Hold",
+        "utilized": "Utilized",
+        "balance": "Balance",
+        "txnDate": "Txn Date",
+        "creditAmount": "Credit Amount",
+        "startDate": "Start Date",
+        "approvedBy": "Approved By",
+        "creditBalance": "Credit Balance",
+        "reserved": "Reserved",
+        "creditLineDeb": "Credit Line Debit/Credit Audit",
+        "generalDetails": "General Details"
+    },
+    "gli": {
+        "historyJobPaymentsList": "History Job Payments List",
+        "pendingJobPaymentList": "Pending Job Payment List"
+    },
+    "taxInvoices": {
+        "service": "Service",
+        "invoiceNo": "Invoice No",
+        "invoiceIssueDate": "Invoice Issue Date",
+        "taxNo": "Tax Number",
+        "customer": "Customer",
+        "status": "Status",
+        "action": "Action",
+        "dateCreated": "Date Created"
+    },
+    "taxSequence": {
+        "id": "Id",
+        "prefix": "Prefix",
+        "sequenceA": "Sequence Start",
+        "sequenceB": "Sequence End",
+        "used": "Consumed",
+        "status": "Status",
+        "dtCreate": "Date Created"
+    },
+    "taxReport": {
+        "reportId": "Report Id",
+        "reportName": "Report Name",
+        "noRecords": "No. Records",
+        "dateCreated": "Date Created",
+        "dateDownloaded": "Date Downloaded"
+    }
+}

@@ -1,0 +1,7 @@
+
+
+INSERT INTO `clickargo2`.`T_CK_CT_TO_PAYMENT` (`TOP_ID`, `TOP_ACCN_TO`, `TOP_DT_TRANSFER`, `TOP_AMT`, `TOP_REFERENCE`, `TOP_EXCEPTION`
+, `TOP_STATUS`, `TOP_DT_CREATE`, `TOP_UID_CREATE`, `TOP_DT_LUPD`, `TOP_UID_LUPD`) 
+VALUES ('TOP2023081011111', 'CK0121', '2023-08-10 ', '13675887.00', 'TXNDO3717566612822408', 'Manually pay', 'S', '2023-08-10 ', 'GLI_U00APP1', '2023-08-10 ', 'SYS');
+
+-- http://localhost:8080/clictruck/api/v1/clickargo/auxiliary/payment/updateFundsTransferResult/TOP2023081011111

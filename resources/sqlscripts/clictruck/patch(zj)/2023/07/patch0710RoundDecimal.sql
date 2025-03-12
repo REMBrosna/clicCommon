@@ -1,0 +1,67 @@
+
+SELECT INV_AMT, ceil(INV_AMT) FROM clickargo2.T_CK_CT_PLATFORM_INVOICE;
+
+-- old amount not correct
+UPDATE `clickargo2`.`T_CK_CT_PLATFORM_INVOICE` SET `INV_VAT` = '550.00' WHERE (`INV_ID` = 'PFINV2023070400619');
+
+
+-- mysql ceil, round, floor
+
+-- update T_CK_CT_PLATFORM_INVOICE_ITEM
+update clickargo2.T_CK_CT_PLATFORM_INVOICE_ITEM set ITM_UNIT_PRICE = round(ITM_UNIT_PRICE);
+update clickargo2.T_CK_CT_PLATFORM_INVOICE_ITEM set ITM_AMOUNT = round(ITM_AMOUNT);
+
+select * from clickargo2.T_CK_CT_PLATFORM_INVOICE_ITEM 
+where ITM_UNIT_PRICE != ITM_AMOUNT;
+
+-- T_CK_CT_PLATFORM_INVOICE
+
+update clickargo2.T_CK_CT_PLATFORM_INVOICE set INV_AMT = round(INV_AMT);
+update clickargo2.T_CK_CT_PLATFORM_INVOICE set INV_VAT = round(INV_AMT * 0.11);
+update clickargo2.T_CK_CT_PLATFORM_INVOICE set INV_TOTAL = INV_AMT + INV_VAT;
+
+-- 
+update clickargo2.T_CK_CT_PLATFORM_INVOICE As c JOIN
+	(SELECT INV_ID, min(CON_PAYTERM_CO_FF) as payTerm
+	FROM clickargo2.T_CK_CT_PLATFORM_INVOICE inv,  clickargo2.T_CK_JOB_TRUCK jt, clickargo2.T_CK_CT_CONTRACT c
+	where inv.INV_JOB_ID = jt.JOB_ID
+		and jt.JOB_PARTY_TO = CON_TO
+		and jt.JOB_PARTY_CO_FF = CON_CO_FF
+		and INV_DT_DUE > '2024-01-01'
+	group by INV_ID) AS sub
+  ON  c.INV_ID = sub.INV_ID
+  set INV_REFRESH = sub.payTerm
+where INV_DT_DUE > '2024-01-01';
+
+
+SELECT INV_DT_ISSUE, INV_REFRESH, DATE_ADD(INV_DT_ISSUE, INTERVAL INV_REFRESH DAY)
+FROM clickargo2.T_CK_CT_PLATFORM_INVOICE
+where INV_DT_DUE > '2024-01-01'; 
+
+update clickargo2.T_CK_CT_PLATFORM_INVOICE set INV_DT_DUE = DATE_ADD(INV_DT_ISSUE, INTERVAL INV_REFRESH DAY)
+where INV_DT_DUE > '2024-01-01'; 
+
+-- backup
+create table zBackup.BU_CK_CT_PLATFORM_INVOICE_ITEM_0710 SELECT * FROM clickargo2.T_CK_CT_PLATFORM_INVOICE_ITEM;
+create table zBackup.BU_CK_CT_PLATFORM_INVOICE_0710 SELECT * FROM clickargo2.T_CK_CT_PLATFORM_INVOICE;
+
+-- 
+update clickargo2.T_CK_CT_PLATFORM_INVOICE As c JOIN
+	(SELECT INV_ID, min(CON_PAYTERM_CO_FF) as payTerm
+	FROM clickargo2.T_CK_CT_PLATFORM_INVOICE inv,  clickargo2.T_CK_JOB_TRUCK jt, clickargo2.T_CK_CT_CONTRACT c
+	where inv.INV_JOB_ID = jt.JOB_ID
+		and jt.JOB_PARTY_TO = CON_TO
+		and jt.JOB_PARTY_CO_FF = CON_CO_FF
+		and INV_DT_DUE > '2024-01-01'
+	group by INV_ID) AS sub
+  ON  c.INV_ID = sub.INV_ID
+  set INV_REFRESH = sub.payTerm
+where INV_DT_DUE > '2024-01-01';
+
+
+SELECT INV_DT_ISSUE, INV_REFRESH, DATE_ADD(INV_DT_ISSUE, INTERVAL INV_REFRESH DAY)
+FROM clickargo2.T_CK_CT_PLATFORM_INVOICE
+where INV_DT_DUE > '2024-01-01'; 
+
+update clickargo2.T_CK_CT_PLATFORM_INVOICE set INV_DT_DUE = DATE_ADD(INV_DT_ISSUE, INTERVAL INV_REFRESH DAY)
+where INV_DT_DUE > '2024-01-01'; 

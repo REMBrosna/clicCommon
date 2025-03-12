@@ -1,0 +1,122 @@
+{
+    "user": {
+        "type": "Detail User",
+        "list": {
+            "title": "Kelola User",
+            "titleAll": "Kelola Semua User",
+            "usrUid": "ID User",
+            "usrName": "Nama",
+            "usrRoles": "Role",
+            "usrAccnId": "ID Akun",
+            "usrDtCreate": "Tanggal Dibuat",
+            "usrDtModified": "Tanggal Pembaruan",
+            "usrStatus": "Status",
+            "header": "Kelola User",
+            "headerAll": "Kelola Semua User",
+            "bulkDownload": "Download Template Registrasi User",
+            "bulkAccnLabel": "Akun",
+            "bulkNumRecLabel": "Jumlah User yang akan didaftarkan",
+            "bulkUpload": "Upload Template",
+            "btnDownload": "Download",
+            "btnUpload": "Upload"
+        },
+        "details": {
+            "tabs": {
+                "profile": "Profil",
+                "notifPref": "Preferensi Notifikasi",
+                "roles": "Role"
+            },
+            "profile": {
+                "usrUid": "ID User",
+                "accnId": "ID Akun",
+                "usrPassNid": "Nomor Identitas Dokumen",
+                "usrName": "Nama",
+                "usrTitle": "Penamaan",
+                "usrGroup": "Grup",
+                "usrDept": "Departemen",
+                "contactTel": "Telepon Kantor",
+                "mobileNo": "Nomor handphone",
+                "usetTelegramChatId": "ID Telegram",
+                "contactEmail": "Email",
+                "addrLn1": "Alamat (Baris 1)",
+                "addrLn2": "Alamat (Baris 2)",
+                "addrLn3": "Alamat (Baris 3)",
+                "addrCity": "Kota",
+                "addrPcode": "Kode Pos",
+                "addrProv": "Propinsi",
+                "ctyCode": "Negara"
+            },
+            "roles": {
+                "availableRoles": "Role yang Tersedia",
+                "selectedRoles": "Role yang Dipilih",
+                "text1": "Untuk menambahkan Role, Tarik Role yang tersedia ke Role yang Dipilih",
+                "text2": "Untuk menghapus Role, Tarik Role yang dipilih ke Role yang tersedia"
+            },
+            "notifPref": {
+                "heading": "Silakan tentukan cara untuk mendapatkan notifikasi dari ClicDo.",
+                "email": "Email",
+                "tlg": "Telegram",
+                "sms": "SMS"
+            },
+            "query": {
+                "title": "Balas Permintaan",
+                "usrId": "ID User",
+                "email": "Email",
+                "btnClose": "Tutup",
+                "btnReset": "Reset"
+            }
+        },
+        "msg": {
+            "resetPasswordSuccess": "Password berhasil diatur ulang!",
+            "activatedSuccess": "User berhasil diaktifkan",
+            "deactivatedSuccess": "User berhasil dinonaktifkan",
+            "errorRoles": "Tolong pilih setidaknya satu role.",
+            "userLoggedInRoleErr": "{{userId}} sedang login. Tidak dapat memperbarui role.",
+            "userLoggedInDeactiveErr": "{{userId}} sedang login. Tidak dapat untuk menonaktifkan user."
+        },
+        "deactivate": {
+            "title": "Nonaktifkan User",
+            "confirm": "User {{userId}} sedang login. Apakah anda ingin melakukan perubahan?"
+        },
+        "roleChange": {
+            "title": "Perbarui User",
+            "content": "User {{userId}} sedang login. Apakah anda ingin melakukan perubahan?"
+        },
+        "resetPwd": {
+            "title": "Atur ulang Password"
+        },
+        "changePassword": {
+            "title": "Ganti Password",
+            "fields": {
+                "currentPassword": "Password saat ini",
+                "newPassword": "Password baru",
+                "confirmPassword": "Konfirmasi Password",
+                "passwordFormat": "Panjang Password harus 8-20 karakter. Password sensitif terhadap huruf besar dan kecil."
+            },
+            "errors": {
+                "length": "Panjang Password harus lebih atau sama dengan 8 Karakter",
+                "notMatch": "Password Baru dan Konfirmasi Password tidak cocok",
+                "required": "Required"
+            }
+        },
+        "field": {
+            "overLength": "Inputan tidak boleh lebih dari {{max}}",
+            "hasWhitespace": "Inputan tidak boleh menggunakan spasi",
+            "alreadyExists": "User ID sudah digunakan"
+        }
+    },
+    "account": {
+        "list": {
+            "headerAll": "Kelola Semua Akun",
+            "accnDtCreate": "Tanggal Dibuat",
+            "accnName": "Nama akun",
+            "accnType": "Jenis akun",
+            "accnId": "ID Akun",
+            "accnStatus": "Status"
+        },
+        "msg": {
+            "activatedSuccess": "Akun berhasil diaktifkan",
+            "deactivatedSuccess": "Akun berhasil dinonaktifkan"
+        }
+    }
+}

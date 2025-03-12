@@ -1,0 +1,10 @@
+1: Export from UAT
+2: Import to production.
+3: Delete clicPay, Job, Account ...
+
+4: Create CT1 dump tables.
+5: Dump CT1 dump tables
+6: run TMP_COMPANY_SG.sql
+7: Import to CT2 migration schema.
+8: run processSg.sql, processSg2.sql
+9: init GLI users.

@@ -1,0 +1,123 @@
+{
+  "register": {
+    "title": "Kelola Akun",
+    "list": "Daftar Onboarding Akun",
+    "header": "Registrasi Akun",
+    "save": "Pendaftaran berhasil disimpan!",
+    "submit": "Pendaftaran berhasil dikirim!",
+    "approved": "Pendaftaran Akun berhasil disetujui!",
+    "rejected": "Pendaftaran Akun berhasil ditolak!",
+    "required": "Bagian ini diperlukan.",
+    "error": {
+      "fileTooBig": "Berkas terlalu besar!",
+      "fileMustBe": "File harus dalam format jpg, jpeg atau png",
+      "compInitialMaxLength": "Tolong tuliskan perusahaan secara spesifik(maks. 5 karakter)",
+      "emptyNotAllowed": "ID Tidak terdaftar atau Spasi tidak diperbolehkan",
+      "accountExist": "ID Akun {{accnrCoIntial}} sudah ada"
+    },
+    "activate": {
+      "done": {
+        "header": "Akun Sudah Aktif!",
+        "msg": "Akun telah diaktifkan! Periksa email Anda untuk detail login."
+      },
+      "success": {
+        "header": "Akun Diaktifkan!",
+        "msg": "Akun Anda Berhasil Diaktifkan! Anda akan segera menerima Email untuk Username/Kata Sandi."
+      },
+      "notFound": {
+        "header": "Error"
+      }
+    },
+    "rejectRemarks": "Catatan",
+    "btnReject": "Tolak",
+    "table": {
+      "accountRegID": "ID Pendaftaran Akun",
+      "accountID": "ID Akun",
+      "companyName": "Nama Perusahaan",
+      "accountType": "Jenis akun",
+      "vatTin": "VAT/TIN",
+      "dateSubmitted": "Tanggal Submit",
+      "status": "Status"
+    }
+  },
+  "companyDetails": {
+    "title": "Detail Perusahaan",
+    "accnrCoIntial": "ID Akun",
+    "atypId": "Jenis akun",
+    "accnName": "Nama Perusahaan",
+    "accnCoyRegn": "Nomor Registrasi Perusahaan",
+    "accnDtExpire": "Tanggal kadaluarsa",
+    "contactTel": "Nomor kontak",
+    "contactTlgrm": "ID Telegram",
+    "contactEmail": "Alamat Email Perusahaan",
+    "addrLn1": "Baris Alamat 1",
+    "addrLn2": "Baris Alamat 2",
+    "addrLn3": "Baris Alamat 3",
+    "addrProv": "Propinsi",
+    "addrCity": "Kota/Distrik",
+    "addrPcode": "Kode Pos",
+    "ctyCode": "Negara"
+  },
+  "permissions": {
+    "title": "Izin",
+    "heading": "Izin Aktifkan/Nonaktifkan",
+    "shipClearanceProcess": "Proses Izin Kapal"
+  },
+  "userDetails": {
+    "title": "Detail Administrator",
+    "usrName": "Nama pemohon",
+    "usrPassNid": "ID/Nomor Paspor",
+    "usrTitle": "Posisi",
+    "contactEmail": "ID email",
+    "contactTel": "Nomor kontak",
+    "addrLn1": "Alamat (Baris 1)",
+    "addrLn2": "Alamat (Baris 2)",
+    "addrLn3": "Alamat (Baris 3)",
+    "addrProv": "Propinsi",
+    "addrCity": "Kota/Distrik",
+    "addrPcode": "Kode Pos",
+    "ctyCode": "Negara"
+  },
+  "companyStamp": {
+    "title": "Detail Logo Perusahaan",
+    "btnUpload": "Unggah Gambar Stempel Agen/Ship Line",
+    "stampPhotoSpec1": "Spesifikasi Foto",
+    "stampPhotoSpec2": "Harus .jpg, .jpeg atau .png",
+    "stampPhotoSpec3": "Ukuran antara 50 KB dan 1.5 MB.",
+    "stampPhotoSpec4": "Ukuran antara 50 KB dan 1 MB.",
+    "preview": "Pratinjau stempel perusahaan"
+  },
+  "suppDocs": {
+    "title": "Dokumen pendukung",
+    "no": "Tidak",
+    "docType": "Jenis Dokumen",
+    "docName": "Nama Dokumen",
+    "required": "Required",
+    "file": "File",
+    "viewFile": "Lihat File",
+    "reference": "Referensi",
+    "yes": "Ya",
+    "not": "Tidak"
+  },
+    "validations": {
+      "accnDetails": {
+        "accnName": "Nama Perusahaan diperlukan",
+        "accnCoyRegn": "Nomor Registrasi Perusahaan dibutuhkan",
+        "accnContact": {
+          "contactTel": "Harap sertakan +Kode Negara dan hapus spasi.",
+          "contactEmail": "Alamat Email Perusahaan diperlukan"
+        },
+        "accnAddr": {
+          "addrLn1": "Alamat (Baris 1) diperlukan",
+          "addrLn2": "Alamat (Baris 2) diperlukan",
+          "addrLn3": "Alamat (Baris 3) diperlukan",
+          "addrPcode": "Kode Pos diperlukan",
+          "addrCity": "Kota/Kabupaten diperlukan",
+          "addrProv": "Provinsi diperlukan",
+          "addrCtry": {
+            "ctyCode": "Negara diperlukan"
+          }
+        }
+      }
+    }
+}

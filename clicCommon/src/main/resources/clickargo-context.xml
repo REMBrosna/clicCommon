@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- Validator -->
+	<bean name="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource"/>
+	</bean>
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="message" />
+	</bean>
+
+
+	<!-- Clickargo Master Dao -->
+	<bean id="mstAuthAccnTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstAuthAccnTypeDaoImpl" />
+	<bean id="mstAuthStateDao" class="com.guudint.clickargo.master.dao.impl.CkMstAuthStateDaoImpl" />
+	<bean id="mstCntSizeDao" class="com.guudint.clickargo.master.dao.impl.CkMstCntSizeDaoImpl" />
+	<bean id="mstCntTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstCntTypeDaoImpl" />
+	<bean id="ckMstDoPartyTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstDoPartyTypeDaoImpl" />
+	<bean id="ckMstInvoiceTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstInvoiceTypeDaoImpl" />
+	<bean id="mstJobStateDao" class="com.guudint.clickargo.master.dao.impl.CkMstJobStateDaoImpl" />
+	<bean id="mstJobTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstJobTypeDaoImpl" />
+	<bean id="mstPaymentAuditTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstPaymentAuditTypeDaoImpl" />
+	<bean id="mstPaymentTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstPaymentTypeDaoImpl" />
+	<bean id="mstServiceTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstServiceTypeDaoImpl" />
+	<bean id="mstShipmentTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstShipmentTypeDaoImpl" />
+	<bean id="mstSvcSubStateDao" class="com.guudint.clickargo.master.dao.impl.CkMstSvcSubStateDaoImpl" />
+	<bean id="mstTaskStateDao" class="com.guudint.clickargo.master.dao.impl.CkMstTaskStateDaoImpl" />
+	<bean id="mstTaskTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstTaskTypeDaoImpl" />
+	<bean id="mstCurrencyDao" class="com.guudint.clickargo.master.dao.impl.MstCurrencyDaoImpl" />
+	<bean id="ckSvcJournalDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSvcJournalDaoImpl" />
+	<bean id="ckSvcWorkflowDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSvcWorkflowDaoImpl" />
+	<bean id="ckMstCreditStateDao" class="com.guudint.clickargo.master.dao.impl.CkMstCreditStateDaoImpl" />
+	<bean id="ckMstJournalTxnTypeDao" class="com.guudint.clickargo.master.dao.impl.CkMstJournalTxnTypeDaoImpl" />
+	<bean id="ckCreditSummaryMonthDao" class="com.guudint.clickargo.credit.dao.impl.CkCreditSummaryMonthDaoImpl" />
+	<bean id="ckMstDoDocAttachStateDao" class="com.guudint.clickargo.master.dao.impl.CkMstDoDocAttachStateDaoImpl" />
+	<bean id="ckMstEstampMethodDao" class="com.guudint.clickargo.master.dao.impl.CkMstEstampMethodDaoImpl" />
+
+	<!-- Clickargo Master Service -->
+	<bean id="clicMasterRecrodsSvc" class="com.guudint.clickargo.master.service.impl.CkMstRecordsSvcImpl">
+		<property name="daoBeans" ref="mstDaoBeanMap" />
+		<property name="idBeans" ref="mstIdBeanMap" />
+	</bean>
+	<util:map id="mstDaoBeanMap" map-class="java.util.HashMap">
+		<entry key="mstAuthAccnType" value="mstAuthAccnTypeDao"/>
+		<entry key="mstAuthState" value="mstAuthStateDao"/>
+		<entry key="mstCntSize" value="mstCntSizeDao"/>
+		<entry key="mstCntType" value="mstCntTypeDao"/>
+		<entry key="mstJobState" value="mstJobStateDao"/>
+		<entry key="mstJobType" value="mstJobTypeDao"/>
+		<entry key="mstPaymentAuditType" value="mstPaymentAuditTypeDao"/>
+		<entry key="mstPaymentType" value="mstPaymentTypeDao"/>
+		<entry key="mstServiceType" value="mstServiceTypeDao"/>
+		<entry key="mstShipmentType" value="mstShipmentTypeDao"/>
+		<entry key="mstSvcSubState" value="mstSvcSubStateDao"/>
+		<entry key="mstTaskState" value="mstTaskStateDao"/>
+		<entry key="mstTaskType" value="mstTaskTypeDao"/>
+		<entry key="mstAttachType" value="mAttTypeDao"/>
+	</util:map>
+	<util:map id="mstIdBeanMap" map-class="java.util.HashMap">
+		<entry key="mstAuthAccnType" value="getAuatId"/>
+		<entry key="mstAuthState" value="getAustId"/>
+		<entry key="mstCntSize" value="getCntzId"/>
+		<entry key="mstCntType" value="getCnttId"/>
+		<entry key="mstJobState" value="getJbstId"/>
+		<entry key="mstJobType" value="getJbtId"/>
+		<entry key="mstPaymentAuditType" value="getPatyId"/>
+		<entry key="mstPaymentType" value="getPtyId"/>
+		<entry key="mstServiceType" value="getSvctId"/>
+		<entry key="mstShipmentType" value="getShtId"/>
+		<entry key="mstSvcSubState" value="getSsstId"/>
+		<entry key="mstTaskState" value="getTskstId"/>
+		<entry key="mstTaskType" value="getTsktId"/>
+		<entry key="mstAttachType" value="getMattId"/>
+	</util:map>
+	<bean id="ckMstShipmentTypeService" class="com.guudint.clickargo.master.service.impl.CkMstShipmentTypeService" />
+	<bean id="ckMstAccnAttTypeService" class="com.guudint.clickargo.manageaccn.service.CkMstAccnAttTypeService" />
+
+	<!-- Master Service Entity Controllers -->
+	<bean id="ckMstEntityServiceController" class="com.guudint.clickargo.master.controller.CkMstEntityServiceController">
+		<property name="entityServices" ref="enCkMstSvcMap" />
+		<property name="entityDTOs" ref="enCkMstDTOMap" />
+	</bean>
+	<util:map id="enCkMstSvcMap" map-class="java.util.HashMap">
+		<!-- <entry key="ckMstAuthAccnType" value="mstAuthAccnTypeDao"/>
+	    <entry key="ckMstAuthState" value="mstAuthStateDao"/>
+	    <entry key="ckMstCntSize" value="mstCntSizeDao"/>
+	    <entry key="ckMstCntType" value="mstCntTypeDao"/>
+	    <entry key="ckMstJobState" value="mstJobStateDao"/>
+	    <entry key="ckMstJobType" value="mstJobTypeDao"/>
+	    <entry key="ckMstPaymentAuditType" value="mstPaymentAuditTypeDao"/>
+	    <entry key="ckMstPaymentType" value="mstPaymentTypeDao"/>
+	    <entry key="ckMstServiceType" value="mstServiceTypeDao"/> -->
+		<entry key="ckMstShipmentType" value="ckMstShipmentTypeService"/>
+		<entry key="ckMstAccnAttType" value="ckMstAccnAttTypeService"/>
+		<!-- <entry key="ckMstSvcSubState" value="mstSvcSubStateDao"/>
+	    <entry key="ckMstTaskState" value="mstTaskStateDao"/>
+	    <entry key="ckMstTaskType" value="mstTaskTypeDao"/>
+	    <entry key="ckMstAttachType" value="mAttTypeDao"/> -->
+
+	</util:map>
+	<util:map id="enCkMstDTOMap" map-class="java.util.HashMap">
+		<!--  <entry key="mstAuthAccnType" value="mstAuthAccnTypeDao"/>
+	    <entry key="ckMstAuthState" value="mstAuthStateDao"/>
+	    <entry key="ckMstCntSize" value="mstCntSizeDao"/>
+	    <entry key="ckMstCntType" value="mstCntTypeDao"/>
+	    <entry key="ckMstJobState" value="mstJobStateDao"/>
+	    <entry key="ckMstJobType" value="mstJobTypeDao"/>
+	    <entry key="ckMstPaymentAuditType" value="mstPaymentAuditTypeDao"/>
+	    <entry key="ckMstPaymentType" value="mstPaymentTypeDao"/>
+	    <entry key="ckMstServiceType" value="mstServiceTypeDao"/> -->
+		<entry key="ckMstShipmentType" value="com.guudint.clickargo.master.dto.CkMstShipmentType"/>
+		<entry key="ckMstAccnAttType" value="com.guudint.clickargo.manageaccn.dto.CkMstAccnAttType"/>
+		<!--  <entry key="ckMstSvcSubState" value="mstSvcSubStateDao"/>
+	    <entry key="ckMstTaskState" value="mstTaskStateDao"/>
+	    <entry key="ckMstTaskType" value="mstTaskTypeDao"/>
+	    <entry key="ckMstAttachType" value="mAttTypeDao"/> -->
+	</util:map>
+
+	<!-- Clickargo Job Dao -->
+	<bean id="ckJobDao" class="com.guudint.clickargo.job.dao.impl.CkJobDaoImpl" />
+	<bean id="ckJobAttachDao" class="com.guudint.clickargo.job.dao.impl.CkJobAttachDaoImpl" />
+	<bean id="ckJobQueryDao" class="com.guudint.clickargo.job.dao.impl.CkJobQueryDaoImpl" />
+	<bean id="ckJobRejectDao" class="com.guudint.clickargo.job.dao.impl.CkJobRejectDaoImpl" />
+	<bean id="ckJobRemarksDao" class="com.guudint.clickargo.job.dao.impl.CkJobRemarksDaoImpl" />
+
+
+	<!-- Clickargo Task Dao -->
+	<bean id="ckTaskDao" class="com.guudint.clickargo.task.dao.impl.CkTaskDaoImpl" />
+	<bean id="ckTaskAttachDao" class="com.guudint.clickargo.task.dao.impl.CkTaskAttachDaoImpl" />
+
+	<!-- Clickargo Container Dao -->
+	<bean id="ckCntDao" class="com.guudint.clickargo.container.dao.impl.CkCntDaoImpl" />
+
+	<!-- Clickargo Payment Dao -->
+	<bean id="ckPaymentAuditDao" class="com.guudint.clickargo.payment.dao.impl.CkPaymentAuditDaoImpl" />
+	<bean id="ckPaymentLedgerDao" class="com.guudint.clickargo.payment.dao.impl.CkPaymentLedgerDaoImpl" />
+	<bean id="ckPaymentTxnDao" class="com.guudint.clickargo.payment.dao.impl.CkPaymentTxnDaoImpl" />
+	<bean id="ckPaymentTxnInvoiceDao" class="com.guudint.clickargo.payment.dao.impl.CkPaymentTxnInvoiceDaoImpl" />
+	<bean id="ckPaymentTxnAttInvoiceDao" class="com.guudint.clickargo.payment.dao.impl.CkPaymentTxnAttInvoiceDaoImpl" />
+	<bean id="ckPaymentTxnLogDao" class="com.guudint.clickargo.payment.dao.impl.CkPaymentTxnLogDaoImpl" />
+
+
+	<!-- Clickargo ClicService Dao -->
+	<bean id="ckSvcSubDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSvcSubDaoImpl" />
+	<bean id="ckSvcSubAttachDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSvcSubAttachDaoImpl" />
+	<bean id="ckSvcAuthDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSvcAuthDaoImpl" />
+	<bean id="ckSvcAuthAttachDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSvcAuthAttachDaoImpl" />
+	<bean id="ckSuspensionLogDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSuspensionLogDaoImpl" />
+	<bean id="ckSvcActionMaskDao" class="com.guudint.clickargo.clicservice.dao.impl.CkSvcActionMaskDaoImpl" />
+
+	<!-- Clicargo E-Stamp Dao -->
+	<bean id="ckEstampTxnDao" class="com.guudint.clickargo.estamp.dao.impl.CkEstampTxnDaoImpl" />
+
+	<!--  Clickargo ClicService Services -->
+	<bean id="ckSvcAuthService" class="com.guudint.clickargo.clicservice.service.impl.CkSvcAuthService" />
+
+	<!--  Clickargo ClicServiceAuth Entity Controller -->
+	<bean id="ckSvcAuthController" class="com.guudint.clickargo.clicservice.controller.CkSvcEntityServiceController">
+		<property name="entityServices" ref="enCkClicServiceSvcMap" />
+		<property name="entityDTOs" ref="enCkClicDtoMap" />
+	</bean>
+	<util:map id="enCkClicServiceSvcMap" map-class="java.util.HashMap">
+		<entry key="ckSvcAuth" value="ckSvcAuthService"/>
+	</util:map>
+	<util:map id="enCkClicDtoMap" map-class="java.util.HashMap">
+		<entry key="ckSvcAuth" value="com.guudint.clickargo.clicservice.dto.CkSvcAuth"/>
+	</util:map>
+
+	<!-- Clickargo Common Dao -->
+	<bean id="ckComponentGuideDao" class="com.guudint.clickargo.common.dao.impl.CkComponentGuideDaoImpl" />
+	<bean id="ckFormControlDao" class="com.guudint.clickargo.common.dao.impl.CkFormControlDaoImpl" />
+	<bean id="ckMstEntityStateDao" class="com.guudint.clickargo.common.dao.impl.CkMstEntityStateDaoImpl" />
+	<bean id="ckMstEntityTypeDao" class="com.guudint.clickargo.common.dao.impl.CkMstEntityTypeDaoImpl" />
+	<bean id="ckMstFormActionDao" class="com.guudint.clickargo.common.dao.impl.CkMstFormActionDaoImpl" />
+	<bean id="ckMstFormTypeDao" class="com.guudint.clickargo.common.dao.impl.CkMstFormTypeDaoImpl" />
+	<bean id="ckRecordDateDao" class="com.guudint.clickargo.common.dao.impl.CkRecordDateDaoImpl" />
+	<bean id="ckSeqNoDao" class="com.guudint.clickargo.common.dao.impl.CkSequenceNoDaoImpl" />
+	<bean id="ckTaxInvoiceDao" class="com.guudint.clickargo.tax.dao.impl.CkTaxInvoiceDaoImpl" />
+	<bean id="ckTaxReportDao" class="com.guudint.clickargo.tax.dao.impl.CkTaxReportDaoImpl" />
+	<bean id="ckCsAccnDao" class="com.guudint.clickargo.common.dao.impl.CkCsAccnDaoImpl" />
+	<bean id="ckCtWhitelabelDao" class="com.guudint.clickargo.common.dao.impl.CkWhitelabelDaoImpl" />
+	<bean id="ckAccnDao" class="com.guudint.clickargo.common.dao.impl.CkAccnDaoImpl" />
+	
+	
+	
+	<!-- CK Clibr Extensions -->
+	<bean id="ckAccnConfigExtDao" class="com.guudint.clickargo.admin.dao.impl.CkAccnConfigExtDaoImpl" />
+	<bean id="ckUnGrantAccountExDao" class="com.guudint.clickargo.common.dao.impl.CkUnGrantAccountExDaoImpl" />
+	<bean id="ckUnGrantUserExDao" class="com.guudint.clickargo.common.dao.impl.CkUnGrantUserExDaoImpl" />
+		
+
+	<!-- Credit Dao -->
+	<bean id="ckCreditDao" class="com.guudint.clickargo.credit.dao.impl.CkCreditDaoImpl" />
+	<bean id="ckCreditJournalDao" class="com.guudint.clickargo.journal.dao.impl.CkCreditJournalDaoImpl" />
+	<bean id="ckCreditSummaryDao" class="com.guudint.clickargo.credit.dao.impl.CkCreditSummaryDaoImpl" />
+	<bean id="ckCreditRequestDao" class="com.guudint.clickargo.credit.dao.impl.CkCreditRequestDaoImpl" />
+	<bean id="ckMstCreditRequestStateDao" class="com.guudint.clickargo.credit.dao.impl.CkMstCreditRequestStateDaoImpl" />
+
+	<!-- Clickargo Common Service -->
+	<bean id="ckComponentGuideService" class="com.guudint.clickargo.common.service.impl.CkComponentGuideServiceImpl" />
+	<bean id="ckJobQueryService" class="com.guudint.clickargo.job.service.impl.CkJobQueryService" />
+	
+	
+	<bean id="ckMstRemarkTypeDao" class="com.guudint.clickargo.common.dao.impl.CkMstRemarkTypeDaoImpl"/>
+	<bean id="ckMstWorkflowTypeDao" class="com.guudint.clickargo.common.dao.impl.CkMstWorkflowTypeDaoImpl"/>
+	<bean id="ckWorkflowRemarkDao" class="com.guudint.clickargo.common.dao.impl.CkWorkflowRemarkDaoImpl"/>
+
+	<!-- Clickargo Common Attachments Controller-->
+	<bean id="ckJobAttchService" class="com.guudint.clickargo.job.service.impl.CkJobAttachService" />
+	<bean id="ckTaskAttchService" class="com.guudint.clickargo.task.service.impl.CkTaskAttachService" />
+	<bean id="ckSvcSubAttchService" class="com.guudint.clickargo.clicservice.service.impl.CkSvcSubAttachService" />
+	<bean id="ckSvcAuthAttchService" class="com.guudint.clickargo.clicservice.service.impl.CkSvcAuthAttachService" />
+	<bean id="ckSvcActionMaskService" class="com.guudint.clickargo.clicservice.service.impl.CkSvcActionMaskService"/>
+	<bean id="ckAccnAttService" class="com.guudint.clickargo.manageaccn.service.CkAccnAttService"/>
+
+	<!-- Credit Service -->
+	<bean id="ckCreditService" class="com.guudint.clickargo.credit.service.impl.CkCreditService" />
+
+	<!-- Journal Service -->
+	<bean id="ckCreditJournalService" class="com.guudint.clickargo.journal.service.impl.CkCreditJournalService" />
+	
+	<bean id="ckWorkflowRemarkService" class="com.guudint.clickargo.manageaccn.service.CkWorkflowRemarkService" />
+		
+	<!-- nanti ini dihapus -->
+	<bean id="stampGatewayService" class="com.guudint.clickargo.external.services.impl.StampGatewayService" />
+
+	<!-- Attachments -->
+	<bean id="ckAttchController" class="com.guudint.clickargo.common.controller.CkAttachmentsController">
+		<property name="entityServices" ref="enCkAttchServiceMap" />
+		<property name="entityDTOs" ref="enCkAttchDtoMap" />
+	</bean>
+	<util:map id="enCkAttchServiceMap" map-class="java.util.HashMap">
+		<entry key="job" value="ckJobAttchService" />
+		<entry key="task" value="ckTaskAttchService" />
+		<entry key="svcSub" value="ckSvcSubAttchService" />
+		<entry key="svcAuth" value="ckSvcAuthAttchService" />
+		<entry key="svcAuth" value="ckSvcAuthAttchService" />
+		<entry key="accnAtt" value="ckAccnAttService" />
+	</util:map>
+	<util:map id="enCkAttchDtoMap" map-class="java.util.HashMap">
+		<entry key="job" value="com.guudint.clickargo.job.dto.CkJobAttach" />
+		<entry key="task" value="com.guudint.clickargo.task.dto.CkTaskAttach" />
+		<entry key="svcSub" value="com.guudint.clickargo.clicservice.dto.CkSvcSubAttach" />
+		<entry key="svcAuth" value="com.guudint.clickargo.clicservice.dto.CkSvcAuthAttach" />
+		<entry key="accnAtt" value="com.guudint.clickargo.manageaccn.dto.CkAccnAtt" />
+	</util:map>
+
+	<!--  Clickargo Common Payment Controller -->
+	<bean id="ckPaymentAuditService" class="com.guudint.clickargo.payment.service.impl.CkPaymentAuditService" />
+	<bean id="ckPaymentTxnService" class="com.guudint.clickargo.payment.service.impl.CkPaymentTxnService" />
+	<bean id="ckPaymentTxnLogService" class="com.guudint.clickargo.payment.service.impl.CkPaymentTxnLogService" />
+
+	<bean id="ckPaymentController" class="com.guudint.clickargo.common.controller.CkPaymentController">
+		<property name="entityServices" ref="enCkPaymentServiceMap" />
+		<property name="entityDTOs" ref="enCkPaymentDtoMap" />
+	</bean>
+	<util:map id="enCkPaymentServiceMap" map-class="java.util.HashMap">
+		<entry key="audit" value="ckPaymentAuditService" />
+		<entry key="paymentTxn" value="ckPaymentTxnService" />
+		<entry key="paymentTxnLog" value="ckPaymentTxnLogService" />
+	</util:map>
+	<util:map id="enCkPaymentDtoMap" map-class="java.util.HashMap">
+		<entry key="audit" value="com.guudint.clickargo.payment.dto.CkPaymentAudit" />
+		<entry key="paymentTxn" value="com.guudint.clickargo.payment.dto.CkPaymentTxn" />
+	</util:map>
+
+	<bean id="coreNotificationService" class="com.vcc.camelone.can.service.impl.NotificationService">
+		<aop:scoped-proxy proxy-target-class="true" />
+	</bean>
+	<!-- <bean id="ckAccnController" class="com.guudint.clickargo.manageaccn.controller.CkAccnController">
+		<property name="entityServices" ref="ckAccnSvcMap"/>
+		<property name="entityDTOs" ref="ckAccnDTOMap" />
+	</bean>
+	<util:map id="ckAccnSvcMap" map-class="java.util.HashMap">
+		<entry key="ckAccn" value="ckAccnService"/>
+	</util:map>
+	<util:map id="ckAccnDTOMap" map-class="java.util.HashMap">
+		<entry key="ckAccn" value="com.vcc.camelone.ccm.dto.CoreAccn"/>
+	</util:map> -->
+	
+	<!-- Clickargo Account Extensions -->
+	<bean id="ckAccnService" class="com.guudint.clickargo.manageaccn.service.CkAccnServiceImpl"/>
+	<bean id="ckAccnServiceDao" class="com.guudint.clickargo.manageaccn.dao.impl.CkCoreAccnDaoImpl"/>
+	<bean id="ckAccnAttDao" class="com.guudint.clickargo.manageaccn.dao.impl.CkAccnAttDaoImpl"/>
+	<bean id="ckMstAccnAttTypeDao" class="com.guudint.clickargo.manageaccn.dao.impl.CkMstAccnAttTypeDaoImpl"/>
+	
+	
+	<!-- 	<bean id="coreNotificationScheduler" class="com.vcc.camelone.can.scheduler.CoreNotificationScheduler"/> -->
+
+	<!-- Stamp dao -->
+	<bean id="ckMstEstampDocDao" class="com.guudint.clickargo.estamp.dao.impl.CkEstampDocDaoImpl" />
+
+	<!-- Clibr Extension of Admin
+	<bean id="ckUserService" class="com.guudint.clickargo.clicservice.service.impl.CkAdminUserService" />
+	
+	<bean id="ckAdminController" class="com.guudint.clickargo.common.controller.CkAdminController">
+		<property name="entityServices" ref="enCkAdminServiceMap" />
+		<property name="entityDTOs" ref="enCkAdminDtoMap" />
+	</bean>
+	<util:map id="enCkAdminServiceMap" map-class="java.util.HashMap">
+		<entry key="ckuser" value="ckUserService" />
+	</util:map>
+	<util:map id="enCkAdminDtoMap" map-class="java.util.HashMap">
+	    <entry key="ckuser" value="com.vcc.camelone.ccm.dto.CoreUsr" />
+	</util:map>
+	 -->
+
+	 <bean id="creditRequestController" class="com.guudint.clickargo.credit.controller.CreditRequestController">
+		<property name="entityServices" ref="enCreditRequestSvcMap"/>
+		<property name="entityDTOs" ref="enCreditRequestDtoMap"/>
+	 </bean>
+	 <util:map id="enCreditRequestSvcMap" map-class="java.util.HashMap">
+		<entry key="crupdate" value="ckCreditRequestService"/>
+	 </util:map>
+	 <util:map id="enCreditRequestDtoMap" map-class="java.util.HashMap">
+		<entry key="crupdate" value="com.guudint.clickargo.credit.dto.CkCreditRequest"/>
+	 </util:map>
+	 <bean id="ckCreditRequestService" class="com.guudint.clickargo.credit.service.impl.CkCreditRequestServiceImpl"/>
+	 
+	 <!-- Register event listeners here for workflow state change  -->
+	 <bean id="accnRegEventListener" class="com.guudint.clickargo.manageaccn.service.AccnRegPostListenerService" />
+	 <bean id="accnSusEventListener" class="com.guudint.clickargo.manageaccn.service.AccnSusPostListenerService" />
+	 <bean id="accnTerEventListener" class="com.guudint.clickargo.manageaccn.service.AccnTerPostListenerService" />
+	 <bean id="accnResumptEventListener" class="com.guudint.clickargo.manageaccn.service.AccnResumptPostListenerService" />
+	 <bean id="creditRequestEventListener" class="com.guudint.clickargo.credit.listener.CreditRequestPostListenerService" />
+	 <util:map id="listenersMap" map-class="java.util.HashMap">
+	 	<!-- Add event listeners for each workflowtype (refer to workflowtypeenum -->
+		<entry key="ACCN_REG" value="accnRegEventListener" />
+		<entry key="ACCN_SUS" value="accnSusEventListener" />
+		<entry key="ACCN_TERM" value="accnTerEventListener" />
+		<entry key="ACCN_RESUMPT" value="accnResumptEventListener" />
+		<entry key="CREDIT_LIMIT_UPDATE" value="creditRequestEventListener" />
+	</util:map>
+	
+	<bean id="creditRequestActivePostListener" class="com.guudint.clickargo.credit.listener.CreditRequestActivePostListener"/>
+	
+	<!-- All submit listeners will be processed here -->
+	<bean id="submitListener" class="com.guudint.clickargo.common.event.listener.SubmitPostListener">
+		<property name="listeners" ref="listenersMap" />
+	</bean>
+	<bean id="verifyListener" class="com.guudint.clickargo.common.event.listener.VerifyPostListener">
+		<property name="listeners" ref="listenersMap" />
+	</bean>
+	<bean id="approveListener" class="com.guudint.clickargo.common.event.listener.ApprovePostListener">
+		<property name="listeners" ref="listenersMap" />
+	</bean>
+	<bean id="rejectListener" class="com.guudint.clickargo.common.event.listener.RejectPostListener">
+		<property name="listeners" ref="listenersMap" />
+	</bean>
+	<bean id="monitoringListener" class="com.guudint.clickargo.common.event.listener.MonitoringListener">
+		<property name="listeners" ref="listenersMap" />
+	</bean>
+	
+	<!-- For system administrator -->
+	<bean id="ckSysParamService" class="com.guudint.clickargo.admin.service.CkSysParamEntityService" />
+	<bean id="ckSysAdminController" class="com.guudint.clickargo.admin.controller.ClickargoSysAdminController">
+		<property name="entityServices" ref="enCkSysAdServiceMap" />
+		<property name="entityDTOs" ref="enCkSysAdDtoMap" />
+	</bean>
+	<util:map id="enCkSysAdServiceMap" map-class="java.util.HashMap">
+		<entry key="sysParam" value="ckSysParamService"/>
+	</util:map>
+	<util:map id="enCkSysAdDtoMap" map-class="java.util.HashMap">
+		<entry key="sysParam" value="com.vcc.camelone.config.dto.CoreSysparam"/>
+	</util:map>
+</beans>

@@ -1,0 +1,304 @@
+{
+    "coJob": {
+        "blNo": "Nomor BL",
+        "type": "Jenis Pengiriman",
+        "authParty": "Authorizer Party",
+        "party": "Party",
+        "clicDoJobListTitle": "Daftar Job ClicDO",
+        "activeJobsTitle": "Pekerjaan Aktif",
+        "jobsHistoryTitle": "Riwayat Pekerjaan",
+        "button": {
+            "newJob": "Tambah Job",
+            "create": "Buat",
+            "history": "Riwayat",
+            "active": "Job Aktif"
+        },
+        "icon": {
+            "showHistoryIcon": "Tampilkan Riwayat Job",
+            "showActiveIcon": "Tampilkan Job yang aktif"
+        },
+        "msg": {
+            "cancelSuccess": "Berhasil Dibatalkan",
+            "deleteSuccess": "Berhasil Dihapus",
+            "confirmation": "Apakah kamu yakin ingin {{action}} {{id}}?",
+            "deleteConfirm": "Are you sure you want to {{action}} this document? "
+        },
+        "popup": {
+            "confirmation": "Konfirmasi",
+            "newJob": "Tambah Job"
+        }
+    },
+    "ffJobClaim": {
+        "jobId": "ID Job",
+        "shipmentType": "Jenis Pengiriman",
+        "shippingLine": "Shipping Line",
+        "noOfBl": "Jumlah BL",
+        "docStatus": "Status Dokumen Verifikasi",
+        "btnAddNewClaimJob": "+ Tambah Claim Job",
+        "showHistoryIcon": "Tampilkan Riwayat Job",
+        "showHistoryHeader": "Riwayat Job",
+        "showActiveIcon": "Tampilkan Job yang aktif",
+        "showActiveHeader": "DO Claim Job",
+        "btnAddNewExtensionJob": "+ Tambah Extension Job",
+        "showExtensionHeader": "DO Extension Job",
+        "action": {
+            "view": "Lihat Job",
+            "edit": "Ubah Job",
+            "delete": "Hapus Job",
+            "query": "Lihat Pertanyaan"
+        }
+    },
+    "ffBlListing": {
+        "blListHeader": "Bill of Ladings",
+        "bcListTitle": "Daftar ClicDO Claim Job",
+        "authoriserParty": "Pihak yang berwenang"
+    },
+    "ffClaimDetails": {
+        "selectedBls": {
+            "blNo": "No BL.",
+            "type": "Jenis Pengiriman",
+            "shippingLine": "Shipping Line",
+            "authoriser": "Authoriser",
+            "blDtSubmitted": "Tanggal BL Disubmit",
+            "noOfContainers": "Jumlah Kontainer",
+            "doState": "Status DO"
+        }
+    },
+    "common": {
+        "shippingLine": "Shipping Line",
+        "jobId": "ID Job",
+        "dtSubmitted": "Tanggal BL Disubmit",
+        "status": "Status",
+        "action": "Aksi",
+        "id": "Id",
+        "name": "Nama",
+        "desc": "Deskripsi",
+        "descOtherLang": "Description (Other Lang)",
+        "dateCreated": "Tanggal Pembuatan",
+        "dateUpdated": "Tanggal Pembaruan",
+        "userId": "User Id",
+        "email": "Email",
+        "phone": "Phone",
+        "startDate": "Tanggal Mulai",
+        "expiryDate": "Tanggal Kadaluarsa",
+        "type": "Tipe",
+        "history": "Riwayat",
+        "active": "Aktif"
+    },
+    "query": {
+        "queryId": "ID Pertanyaan",
+        "requestor": "Pemberi Pertanyaan",
+        "query": "Pertanyaan",
+        "dtQuery": "Tanggal Pertanyaan",
+        "responder": "Responden",
+        "response": "Respon",
+        "dtResponse": "Tanggal Respon",
+        "action": "Aksi"
+    },
+    "docVerification": {
+        "requireReturn": "Memerlukan Pengembalian",
+        "docType": "Jenis Dokumen",
+        "refNo": "No Referensi.",
+        "doNo": "No DO.",
+        "dtCreate": "Dibuat pada",
+        "status": "Status Dokumen",
+        "payStatus": "Payment Status",
+        "action": "Aksi"
+    },
+    "attachments": {
+        "title": "Lampiran",
+        "titleSub": "Job Dokumen",
+        "docFile": "File Dokumen",
+        "nofilechosen": "Tidak ada file yang dipilih",
+        "validityDt": "Tanggal berlaku",
+        "docId": "ID Dokumen",
+        "docType": "Jenis Dokumen",
+        "docName": "Nama Dokumen",
+        "docNo": "No Dokumen",
+        "authoriser": "Authoriser",
+        "blNo": "No BL.",
+        "doNo": "No DO.",
+        "dtCreate": "Dibuat pada",
+        "dtValidity": "Tanggal berlaku",
+        "action": "Aksi"
+    },
+    "payments": {
+        "ffTableHdr": "Jok Aktif untuk Pembayaran",
+        "jobId": "ID Job",
+        "shipmentType": "Tipe Pengiriman",
+        "dtSubmit": "Tanggal Disubmit",
+        "noOfBls": "Jumlah BL",
+        "amtIDR": "Total (IDR)",
+        "amtUSD": "Total (USD)",
+        "status": "Status",
+        "action": "Aksi",
+        "paymentConfirmMsg": "Apakah kamu yakin ingin melakukan pembayaran {{param}}?",
+        "paymentConfirmTitle": "Konfirmasi Pembayaran",
+        "errorNoSelectMsg": "Tolong pilih setidaknya 1 job untuk melakukan pembayaran",
+        "errorNoSelectTitle": "Tidak ada Job yang dipilih!",
+        "errorNoJobNoToSelected": "Please select a Trucking Operator and at least one job for payment",
+        "errorNoTransactionSelectTitle": "Tidak ada transaksi dipilih!",
+        "errorDifferentJobStatusSelection": "Tolong pilih job dengan status yang sama!",
+        "errorThereIsNoOption": "Tidak ada pilihan untuk job ini!",
+        "errorYourAccountIsSuspended": "Akun anda sedang ditangguhkan!",
+        "errorCompletedReq": "Tolong lengkapi data di DO!"
+    },
+    "trucklist": {
+        "jobid": "ID Pekerjaan",
+        "type": "Tipe Pekerjaan",
+        "truckoperator": "Trucking Operator",
+        "coff": "CO/FF",
+        "dtdelivery": "Tanggal Pengiriman",
+        "shipref": "Referensi Pengiriman",
+        "cusref": "Customer Ref",
+        "pickup": "Lokasi Pengambilan",
+        "lastdrop": "Tujuan Terakhir",
+        "dtCreate": "Tanggal Pembuatan",
+        "dtLupd": "Waktu Pembaruan",
+        "dtDueIn": "Job In Payment Due Date",
+        "dtDueOut": "Job Out Payment Due Date",
+        "status": "Status",
+        "action": "Action"
+    },
+    "billOfLading": {
+        "action": {
+            "downloadBl": "Download",
+            "viewBl": "Lihat Detail",
+            "reject": "Reject",
+            "withdraw": "Withdraw"
+        }
+    },
+    "truck": {
+        "type": "Tipe",
+        "platNo": "Nomor Plat",
+        "class": "Kelas",
+        "photo": "photo",
+        "dimention": "Dimensi (LWH)",
+        "maxWeight": "Beban Maksimal (Kg)",
+        "volume": "Volume (CBM)",
+        "maintenance": "Maintenance",
+        "size": "Ukuran",
+        "Number": "Nomor"
+    },
+    "audits": {
+        "event": "Event",
+        "dateTime": "Date Time",
+        "remarks": "Remarks",
+        "userId": "User Id",
+        "userName": "User Name"
+    },
+    "driver": {
+        "lisenseNo": "Nomor SIM"
+    },
+    "rental": {
+        "to": "To",
+        "noTrucks": "No Trucks",
+        "truckType": "Truck Type",
+        "noOfTruck": "No. Of Trucks",
+        "rentalValue": "Rental Value",
+        "rentalRate": "Rental Rate"
+    },
+    "contract": {
+        "truckOperator": "Truck Operator",
+        "freightForwader": "Freight Forwader",
+        "cargoOwner": "Cargo Owner"
+    },
+    "verified": {
+        "jobId": "Job ID",
+        "jobType": "Tipe Pekerjaan",
+        "invoiceFrom": "Invoice Dari",
+        "noOfTrips": "Jumlah Perjalanan",
+        "changes": "Changes",
+        "reimbursement": "Pengembalian",
+        "billingDate": "Tanggal Penagihan",
+        "invoiceAppDt": "Tanggal Faktur Disetujui",
+        "status": "Status",
+        "verifiedDate": "Tanggal Verifikasi",
+        "verifiedBy": "Verifikasi Oleh",
+        "history": "Riwayat",
+        "active": "Aktif",
+        "title": "Pekerjaan Terverifikasi",
+        "charges": "Biaya",
+        "paymentDueDate": "Jatuh Tempo Pembayaran",
+        "approvedDate": "Tanggal Disetujui",
+        "approvedBy": "Disetujui Oleh"
+    },
+    "billVerification": {
+        "jobId": "Job ID",
+        "jobType": "Tipe Pekerjaan",
+        "coFfName": "Cargo Owner",
+        "toName": "Trucking Operator",
+        "status": "Status",
+        "ackDate": "Date Acknowledged"
+    },
+    "orderDetails": {
+        "title": "Rincian DO",
+        "from": "Dari",
+        "to": "Ke",
+        "orderNum": "Nomor DO",
+        "do": "DO",
+        "signedDo": "Signed DO"
+    },
+    "finance": {
+        "invTitle": "Invoice Terverifikasi",
+        "jobPaymentTitle": "Pembayaran Aktif",
+        "historyApprovedJobInvoice": "Riwayat Pekerjaan",
+        "activeApprovedJobInvoice": "Pekerjaan Aktif",
+        "verifiedJobsTitle": "Verified Job Invoices",
+        "approvedJobsTitle": "Approved Job Invoices",
+        "invId": "ID Invoice",
+        "invFrom": "Invoice Dari",
+        "noOfJobs": "Jumlah Pekerjaan",
+        "noOfTrips": "Jumlah Perjalanan",
+        "charges": "Biaya",
+        "reimbursement": "Pengembalian",
+        "billingDate": "Tanggal Penagihan",
+        "verifiedDate": "Tanggal Verifikasi",
+        "verifiedBy": "Verifikasi Oleh",
+        "paymentState": "Status Pembayaran",
+        "approvedDate": "Tanggal Disetujui",
+        "approvedBy": "Disetujui Oleh",
+        "dateCreated": "Tanggal Pembuatan",
+        "dateUpdated": "Tanggal Update",
+        "status": "Status",
+        "confirmation": {
+            "title": "Konfirmasi",
+            "msg": "Apa anda yakin untuk {{action}}?"
+        },
+        "creditLines": {
+            "txtType": "Txn Type",
+            "desc": "Deskripsi",
+            "onHold": "On Hold",
+            "utilized": "Utilized",
+            "balance": "Balance",
+            "txnDate": "Txn Date",
+            "creditAmount": "Credit Amount",
+            "startDate": "Tanggal Mulai",
+            "approvedBy": "Disetujui Oleh",
+            "creditBalance": "Credit Balance",
+            "reserved": "Reserved",
+            "creditLineDeb": "Credit Line Debit/Credit Audit",
+            "generalDetails": "Detail Umum"
+        }
+    },
+    "gli": {
+        "historyJobPaymentsList": "Daftar Riwayat Pembayaran Pekerjaan",
+        "pendingJobPaymentList": "Daftar Pembayaran Pekerjaan"
+    },
+    "taxInvoices": {
+        "service": "Service",
+        "invoiceNo": "Invoice No",
+        "invoiceIssueDate": "Invoice Issue Date",
+        "taxNo": "taxNo",
+        "customer": "Customer",
+        "status": "Status",
+        "action": "Action"
+    },
+    "taxReport": {
+        "reportId": "Id Laporan",
+        "reportName": "Nama Laporan",
+        "noRecords": "Nomor Laporan",
+        "dateCreated": "Tanggal Pembuatan",
+        "dateDownloaded": "Tanggal Download"
+    }
+}

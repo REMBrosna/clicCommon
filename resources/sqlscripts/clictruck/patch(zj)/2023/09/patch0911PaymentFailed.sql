@@ -1,0 +1,4 @@
+
+UPDATE `clickargo2`.`T_CK_CT_TO_PAYMENT` SET `TOP_EXCEPTION` = 'General Error, please contact Danamon admin' WHERE (`TOP_ID` = 'TOP2023090890757');
+
+UPDATE `clickargo2`.`T_CK_PAYMENT_TXN` SET `PTX_PAYMENT_STATE` = 'NEW' WHERE (`PTX_ID` = 'TXNDO6411982982544652');

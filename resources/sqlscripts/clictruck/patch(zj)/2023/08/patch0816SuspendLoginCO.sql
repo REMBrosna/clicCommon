@@ -1,0 +1,7 @@
+
+create table zBackup.T_CORE_ACCN_0816 select * FROM clickargo2.T_CORE_ACCN c;
+
+UPDATE `clickargo2`.`T_CORE_ACCN` SET `ACCN_STATUS` = 'S' WHERE (`ACCN_ID` = 'CK0287') and ACCN_NAME LIKE '%Lazuardo%';
+UPDATE `clickargo2`.`T_CORE_ACCN` SET `ACCN_STATUS` = 'S' WHERE (`ACCN_ID` = 'CK0619') and ACCN_NAME LIKE '%MUTIARATAMA%';
+UPDATE `clickargo2`.`T_CORE_ACCN` SET `ACCN_STATUS` = 'S' WHERE (`ACCN_ID` = 'CK0281') and ACCN_NAME LIKE '%SURYA PERSADA%';
+UPDATE `clickargo2`.`T_CORE_ACCN` SET `ACCN_STATUS` = 'S' WHERE (`ACCN_ID` = 'CK0624') and ACCN_NAME LIKE '%Transvia%';

@@ -1,0 +1,3 @@
+update clickargo2.T_CORE_NOTIFICATION_LOG 
+set NLOG_DELSTATUS = 'S'
+where NLOG_PARAM like '%CK_NTL_0016%'  and NLOG_DELSTATUS = 'R'

@@ -1,0 +1,35 @@
+
+CREATE table zBackup.T_CK_CREDIT_JOURNAL_0728 as select * FROM clickargo2.T_CK_CREDIT_JOURNAL;
+
+CREATE TABLE zBackup.PATCH_CREDIT_JOURNAL AS select CJN_TXN_REF, count(*) c, min(CJN_ID) MIN_CJN_ID, max(CJN_ID) MAX_CJN_ID 
+from zBackup.T_CK_CREDIT_JOURNAL_0728
+where CJN_TXN_TYPE = 'JOB_SUBMIT'
+	and CJN_TXN_REF not in (
+		SELECT CJN_TXN_REF FROM zBackup.T_CK_CREDIT_JOURNAL_0728
+	where CJN_TXN_TYPE = 'JOB_CANCEL'
+    )
+group by CJN_TXN_REF
+having c > 1
+order by MIN_CJN_ID asc;
+
+DELETE FROM T_CK_CREDIT_JOURNAL WHERE CJN_ID IN (SELECT MAX_CJN_ID FROM zBackup.PATCH_CREDIT_JOURNAL);
+
+-- 
+select CJN_TXN_REF, count(*) c, min(CJN_ID) MIN_CJN_ID, max(CJN_ID) MAX_CJN_ID 
+from zBackup.T_CK_CREDIT_JOURNAL_0728
+where CJN_TXN_TYPE = 'JOB_SUBMIT'
+	and CJN_TXN_REF not in (
+		SELECT CJN_TXN_REF FROM zBackup.T_CK_CREDIT_JOURNAL_0728
+	where CJN_TXN_TYPE = 'JOB_CANCEL'
+    )
+group by CJN_TXN_REF
+having c > 1
+order by MIN_CJN_ID asc;
+
+-- 
+
+insert into T_CK_CREDIT_JOURNAL 
+select * from zBackup.T_CK_CREDIT_JOURNAL_0728 where CJN_ID in (select MAX_CJN_ID from PATCH_CREDIT_JOURNAL );
+
+
+

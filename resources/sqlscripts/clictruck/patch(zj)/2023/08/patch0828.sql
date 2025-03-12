@@ -1,0 +1,6 @@
+
+
+create table zBackup.T_CK_PAYMENT_TXN_0828 as select * from clickargo2.T_CK_PAYMENT_TXN ;
+
+UPDATE `clickargo2`.`T_CK_PAYMENT_TXN` SET `PTX_PAYMENT_STATE` = 'NEW' WHERE (`PTX_ID` = 'TXNDO5277418622706752') AND PTX_PAYMENT_STATE = 'VER_BILL';
+

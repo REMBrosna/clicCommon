@@ -1,0 +1,343 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.vcc.camelone</groupId>
+	<artifactId>pomr</artifactId>
+	<version>0.0.9-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version>1.8</java-version>
+		<maven-eclipse-plugin-version>2.9</maven-eclipse-plugin-version>
+		<org.apache.maven.plugins.maven-compiler-plugin-version>2.5.1</org.apache.maven.plugins.maven-compiler-plugin-version>
+		<org.codehaus.mojo-version>1.2.1</org.codehaus.mojo-version>
+		<java-version>1.8</java-version>
+
+		<!-- Sun -->
+		<com.sun.mail-version>1.6.2</com.sun.mail-version>
+
+		<!-- JavaX -->
+		<javax.activation-version>1.1.1</javax.activation-version>
+		<javax.servlet-version>3.0.1</javax.servlet-version>
+		<javax.validation-version>1.1.0.Final</javax.validation-version>
+
+		<!-- Apache -->
+		<org.apache.logging.log4j-version>2.17.1</org.apache.logging.log4j-version>
+		<org.apache.poi>4.1.2</org.apache.poi>
+
+		<!-- Apache Commons -->
+		<commons-configuration-version>1.10</commons-configuration-version>
+		<commons-beanutils-version>1.9.0</commons-beanutils-version>
+		<commons-net-version>3.3</commons-net-version>
+		<commons-collections-version>3.2.1</commons-collections-version>
+		<org.apache.commons-lang-version>3.4</org.apache.commons-lang-version>
+		<org.apache.commons-email-version>1.5</org.apache.commons-email-version>
+		<commons-io-version>2.5</commons-io-version>
+		<commons-fileupload-version>1.2.2</commons-fileupload-version>
+
+		<!-- Hibernate -->
+		<org.hibernate-version>4.3.8.Final</org.hibernate-version>
+		<org.hibernate-validator>5.1.2.Final</org.hibernate-validator>
+		<org.hibernate-core>4.3.8.Final</org.hibernate-core>
+
+		<!-- 3rd Party Library -->
+		<org.codehaus.jackson-version>1.9.13</org.codehaus.jackson-version>
+		<junit-version>4.12</junit-version>
+		<mysql-version>8.0.25</mysql-version>
+		<com.mchange.c3p0-version>0.9.5.2</com.mchange.c3p0-version>
+		<com.mchange.commons-version>0.2.10</com.mchange.commons-version>
+		<com.fasterxml.jackson.core-version>2.8.9</com.fasterxml.jackson.core-version> <!-- JSON -->
+		<com.jcraft.jsch-version>0.1.54</com.jcraft.jsch-version> <!-- SFTP -->
+		<com.opencsv-version>4.0</com.opencsv-version> <!-- CVS -->
+		<net.sf.jasperreports-version>6.21.2</net.sf.jasperreports-version>
+		<jasperreports-fonts-version>6.21.2</jasperreports-fonts-version>
+		<com.lowagie-version>2.1.7</com.lowagie-version>
+
+		<!-- Spring Framework -->
+		<org.springframework-version>4.3.3.RELEASE</org.springframework-version>
+		<spring.security-version>4.2.3.RELEASE</spring.security-version>
+		
+		<org.apache.activemq-version>5.10.0</org.apache.activemq-version>
+		<org.glassfish.jersey-version>2.34</org.glassfish.jersey-version>
+	</properties>
+
+	<dependencies>
+		<!-- Sun -->
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>${com.sun.mail-version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- JavaX -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>${javax.activation-version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${javax.validation-version}</version>
+		</dependency>
+
+		<!-- Apache -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${org.apache.logging.log4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${org.apache.logging.log4j-version}</version>
+		</dependency>
+ 		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-1.2-api</artifactId>
+			<version>${org.apache.logging.log4j-version}</version>
+		</dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-web</artifactId>
+			<version>${org.apache.logging.log4j-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${org.apache.poi}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${org.apache.poi}</version>
+		</dependency>
+
+		<!-- Apache Commons -->
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>${commons-configuration-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons-beanutils-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+			<version>${commons-net-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${commons-collections-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${org.apache.commons-lang-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>${org.apache.commons-email-version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.mail</groupId>
+					<artifactId>javax.mail</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload-version}</version>
+		</dependency>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${org.hibernate-validator}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${org.hibernate-core}</version>
+		</dependency>
+
+		<!-- 3rd Party Library -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${org.codehaus.jackson-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>${com.mchange.c3p0-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>mchange-commons-java</artifactId>
+			<version>${com.mchange.commons-version}</version>
+		</dependency>
+		<dependency> <!-- JSON -->
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson.core-version}</version>
+		</dependency>
+		<dependency>  <!-- sFTP -->
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>${com.jcraft.jsch-version}</version>
+		</dependency>
+		<dependency>  <!-- CSV -->
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>${com.opencsv-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>${net.sf.jasperreports-version}</version>
+			    <exclusions>
+			        <exclusion>
+			            <groupId>org.olap4j</groupId>
+			            <artifactId>olap4j</artifactId>
+			        </exclusion>
+			    </exclusions>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-fonts</artifactId>
+			<version>${jasperreports-fonts-version}</version>
+		</dependency>
+
+		<!-- Spring Framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework-version}</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security-version}</version>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+			<version>${org.springframework-version}</version>
+        </dependency>
+		
+		<!-- ActiveMQ -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-spring</artifactId>
+			<version>${org.apache.activemq-version}</version>
+        </dependency>	
+                
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${org.glassfish.jersey-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+			<version>${org.glassfish.jersey-version}</version>
+		</dependency>
+
+
+		<!-- Camel One -->
+	</dependencies>
+
+</project>
